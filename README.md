@@ -6,7 +6,7 @@ That line is how [Liquid AI](https://www.liquid.ai) describes its own bet to pro
 
 ## What I've found
 
-In progress. Each finding lands here when a lab proves it.
+- SiMa lists this board at 16 GB, but Linux sees 5.8 GiB and 5.3 GiB was available when I measured it. A model that needs 8 GB won't fit on the CPU, so I measure the real limit before promising what a device can run. I haven't checked how the reserved memory is divided, and this is one board.
 
 ## The evidence
 
