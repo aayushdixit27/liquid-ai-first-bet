@@ -7,6 +7,7 @@ That line is how [Liquid AI](https://www.liquid.ai) describes its own bet to pro
 ## What I've found
 
 - SiMa lists this board at 16 GB, but Linux sees 5.8 GiB and 5.3 GiB was available when I measured it. A model that needs 8 GB won't fit on the CPU, so I measure the real limit before promising what a device can run. I haven't checked how the reserved memory is divided, and this is one board.
+- The 230M model reached 279.3 tokens a second on the accelerator, 4.9x the CPU, and still gave a reason that didn't follow when I asked if a box at a gate needed an alert. Speed told me nothing about whether to trust it, so I cut the written reason from the alert in my bet. That rests on one answer, and I haven't timed a photo yet.
 
 ## The evidence
 

@@ -4,6 +4,26 @@ Written in Lab 1, then updated after each lab. Old versions stay visible.
 
 This is a sample project for a lab. It tests one idea on one board. It is not a product.
 
+## Version 2 (after Lab 1)
+
+**Decision:** Keep the bet for now. I need more information before I change it, specifically what happens when a photo goes through the model. The claim stays as it is in version 1.
+
+**What Lab 1 showed:** The small model fits and runs fast on text. The 4B image model loaded in 14.26 s and gave a short text answer in 1.9 s once loaded. No photo was tested, so "checks a camera photo every minute" is still unproven.
+
+**What would have broken it today:** A model that wouldn't load, or a load and answer time over 60 seconds. Neither happened on text.
+
+**Cut: the written reason in the alert.** The alert is now a flag plus the photo, and the person reviewing it decides.
+- Why: I asked the 230M model if a box in front of a gate was worth an alert. It said yes, because nobody reporting a problem suggests the camera may be broken. That reason doesn't follow. A confident wrong reason could mislead the person reviewing the alert, and could send a truck out for nothing.
+- What else this gives me: a person sees the photo itself, and each answer in Lab 2 is either right or wrong.
+- Limit: this rests on one answer from the small text model. I haven't tested reasons from the 4B model. I'd add reasons back if a real test shows they're reliable.
+
+**Buyer and budget:** Whoever approves the budget for the site, which may be the operations director. I assume it's part of the tech budget. I need to confirm that with a buyer.
+
+**Price:** $25 per site per month, as a placeholder. The missing number is how many incidents a site has each year.
+- A truck visit is reported at about $150 to $500 (vendor sources, no agreed benchmark). A copper theft repair is reported at about $4,000 to $6,000 (utilities, mostly 2013 to 2014 reports).
+- $25 a month is $300 a year (computed), so one false alarm that sends a truck could use up most of a year's fee.
+- Inspections stay in place, so this doesn't save those trips. Catching damage early also doesn't undo it. The value is finding it sooner.
+
 ## Version 1 (Lab 1, before any measurements)
 
 **Vertical:** Remote utility and pipeline sites.

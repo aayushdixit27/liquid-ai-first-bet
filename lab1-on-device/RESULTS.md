@@ -62,6 +62,16 @@ LFM3 and d1 can't run on this accelerator because no compiled version exists, so
 
 ## Problems and fixes
 
-- `Ctrl-C` didn't exit `llima` in an interactive session. I closed the SSH connection with `~.` and confirmed nothing was still running before measuring.
+- `Ctrl-C` didn't exit `llima` in an interactive session. I closed the SSH connection and confirmed nothing was still running before measuring.
 - `llima run` has no image option in `cli` mode, so the photo test didn't happen.
+
+## Buyer, budget owner, pricing, and what would kill it
+
+Whoever approves the budget for the site, which may be the operations director. I assume it's part of the tech budget. My first price was $25 per site per month. That was a guess, and I compared it with Starlink, which was the wrong comparison because the dish stays in the design. It stays as a placeholder until I know how many incidents a site has each year.
+
+The bet dies if most sites already have enough power and a good link, or if a photo check takes longer than 60 seconds.
+
+## The bet: keep, change or kill, and why
+
+Keep for now. I need more information before I change it, specifically what happens when a photo goes through the model. I cut the model's written reason from the alert, because the one reason I tested didn't follow. Details are in [BET.md](../BET.md).
 
