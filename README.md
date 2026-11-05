@@ -1,8 +1,8 @@
 # Modalix interview labs
 
-Three one-hour labs I ran to prepare for a Product Manager interview at [Liquid AI](https://www.liquid.ai). The posting asks for hands-on model depth: "you have fine-tuned, trained, or built evals for models yourself." So I did, on an edge AI board on my desk.
+Three one-hour labs I'm running to prepare for a Product Manager interview at [Liquid AI](https://www.liquid.ai). The posting asks for hands-on model depth: "you have fine-tuned, trained, or built evals for models yourself." So I'm doing that here, on an edge AI board on my desk.
 
-The labs were built with Claude. I ran them, made the decisions, and wrote up the results.
+The labs were built with Claude. I run them, make the decisions, and write up the results.
 
 | Lab | Question | Results |
 |---|---|---|
