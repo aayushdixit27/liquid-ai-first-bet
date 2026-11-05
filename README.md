@@ -1,6 +1,6 @@
 # "Liquid's bet is that device-native, constraint-aware AI is how intelligence actually reaches the real world."
 
-That line is from [Liquid AI's product page](https://www.liquid.ai). I'm preparing for a Product Manager interview there, so I'm testing it myself, on a SiMa Modalix board on my desk.
+That line is how [Liquid AI](https://www.liquid.ai) describes its own bet to product candidates. I'm preparing for a Product Manager interview there, so I'm testing it myself, on a SiMa Modalix board on my desk.
 
 **What fits on the device? What can it be trusted to decide? What does it take to make it better after it ships?**
 
