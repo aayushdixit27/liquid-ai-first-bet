@@ -1,4 +1,4 @@
-# Modalix interview labs
+# Liquid AI: first bet
 
 Three one-hour labs I'm running to prepare for a Product Manager interview at [Liquid AI](https://www.liquid.ai). The posting asks for hands-on model depth: "you have fine-tuned, trained, or built evals for models yourself." So I'm doing that here, on an edge AI board on my desk.
 
