@@ -28,3 +28,4 @@ The limits in the claim are targets I chose. None of them has been measured yet.
 - Whether these sites really lack power or a good link. If most have both, the bet is dead.
 - How often these sites get inspected today, which sets the bar to beat.
 - Whether a buyer will act on an alert.
+- How much energy each photo check uses. A solar site cares about the total energy for each check, not only the wattage on a spec sheet.
