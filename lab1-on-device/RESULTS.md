@@ -33,3 +33,6 @@ In progress.
 | 4B on accelerator, short prompt speed | 24.3 tokens/s | measured | One run, 41 tokens |
 | 4B on accelerator, short prompt first token | 0.21 s | measured | Timed across a terminal |
 | 4B on accelerator, short prompt total | 1.9 s | measured | Text only, model already loaded |
+| Bytes sent by the board over its cable | 8,358,384 | measured | Includes my SSH sessions. Counts bytes, not contents |
+
+Not tested: a real photo. `llima run --help` shows no image option in `cli` mode, and `board_bench_mla.py` sends text only. `--mode web` has not been checked for image input.
