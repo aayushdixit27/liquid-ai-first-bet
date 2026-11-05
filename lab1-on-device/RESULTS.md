@@ -20,3 +20,10 @@ In progress.
 | 230M on accelerator, long prompt first token | 0.04 s | measured | Timed across a terminal |
 | 230M on accelerator, short prompt speed | 297.1 tokens/s | measured | One run, 35 tokens, too short to trust |
 | 230M on accelerator, short prompt first token | 0.02 s | measured | Timed across a terminal |
+| 230M on CPU, cold start | 2.46 s | measured | One run, llama.cpp |
+| 230M on CPU, long prompt speed | 56.6 tokens/s | measured | One run, 128 tokens, Q8_0 file |
+| 230M on CPU, long prompt first token | 0.414 s | measured | 159-token prompt |
+| 230M on CPU, short prompt speed | 58.2 tokens/s | measured | One run, 128 tokens |
+| 230M on CPU, short prompt first token | 0.064 s | measured | 14-token prompt |
+| 230M on CPU, memory | 562 to 569 MB | measured | Read before and after the runs |
+| Accelerator speed advantage | 4.9x | computed | Long prompts, 279.3 / 56.6. Different file format and runtime |
