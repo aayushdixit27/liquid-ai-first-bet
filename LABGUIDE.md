@@ -63,4 +63,4 @@ Built with Claude to prepare for my Liquid AI product interview. I ran it on my 
 
 ## Afterwards
 
-Add each measured number to `/Users/aayushdixit/Downloads/Liquid AI Interview/coach/evidence.md` under Unlocked, with its source and limit, and update that lab's status there. Tell them to run `grill lab N` in the coach window.
+Add each measured number to `../coach/evidence.md` under Unlocked, with its source and limit, and update that lab's status there. Tell them to run `grill lab N` in the coach window.

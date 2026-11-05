@@ -7,6 +7,8 @@ description: Guides Aayush through Lab 3, fine-tuning a Liquid model on their Ma
 
 **Interview gap this closes:** "you have fine-tuned a model yourself." Liquid's posting says its core offering is customization and fine-tuning, so this is the most important lab. They should finish knowing the real difference between prompting and fine-tuning. It also forces the keep-or-kill decision on the bet.
 
+All lab commands run from the repo folder, so if you're in its parent, start with `! cd liquid-ai-first-bet`.
+
 Read `LABGUIDE.md` in the repo root first and follow it. Do Lab 2 first; its results are the baseline.
 
 Target: 60 minutes.

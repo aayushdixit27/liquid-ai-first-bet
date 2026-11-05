@@ -7,6 +7,8 @@ description: Guides Aayush through Lab 2, building an eval that compares rules, 
 
 **Interview gap this closes:** "built evals yourself", "what belongs in the model versus the harness", and "when is a decision model the right tool?" They should finish with a measured answer to each. It also tests the bet in `BET.md`.
 
+All lab commands run from the repo folder, so if you're in its parent, start with `! cd liquid-ai-first-bet`.
+
 Read `LABGUIDE.md` in the repo root first and follow it. Do Lab 1 first; `BET.md` comes from it.
 
 Target: 60 minutes.

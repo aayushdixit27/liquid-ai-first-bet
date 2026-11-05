@@ -7,6 +7,8 @@ description: Guides Aayush through Lab 1, running Liquid models on the Modalix b
 
 **Interview gap this closes:** "when is an on-device model the right tool?" and "when is an LFM the right tool?" They should finish able to answer with numbers they measured themself. It also starts the bet that runs through all three labs: picks where to play, and thesis then evidence.
 
+All lab commands run from the repo folder, so if you're in its parent, start with `! cd liquid-ai-first-bet`.
+
 Read `LABGUIDE.md` in the repo root first and follow it. It sets how to guide.
 
 Target: 60 minutes.
