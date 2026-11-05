@@ -4,7 +4,7 @@ Built with Claude to prepare for my Liquid AI product interview. I ran it on my 
 
 ## What I wanted to know
 
-In progress.
+When does a model belong on the device, and does a model that fits on this board run fast enough for my bet?
 
 ## What I measured
 
@@ -36,3 +36,32 @@ In progress.
 | Bytes sent by the board over its cable | 8,358,384 | measured | Includes my SSH sessions. Counts bytes, not contents |
 
 Not tested: a real photo. `llima run --help` shows no image option in `cli` mode, and `board_bench_mla.py` sends text only. `--mode web` has not been checked for image input.
+
+## What surprised me
+
+The responses were fast, but the answers weren't always good. I asked if a box in front of a gate was worth an alert. It said yes, and its reason was that nobody reporting a problem suggests the camera may be broken. That reason doesn't follow.
+
+It was honest about the news. I expected it to fail that question, and it said it couldn't know.
+
+The accelerator was 4.9x faster than the CPU on the long prompt, close to my 5x guess. The CPU loaded slightly faster.
+
+## What I'd tell a customer
+
+On-device is the right call mainly for privacy and a lack of internet. If it's confidential data or video that needs to stay on the device, or the internet isn't strong, the model can keep working locally. I assume most functions would run on the model itself, but I haven't tested that. I also haven't compared it with a cloud model on speed.
+
+A fast model might give you useful output, but it could also give you garbage. A model needs to be accurate and fast to be useful.
+
+LFM3 and d1 can't run on this accelerator because no compiled version exists, so on this board they run on the CPU. I didn't run either of them in this lab.
+
+## What this doesn't show
+
+- How long a real photo takes. The tests used text only.
+- Whether any model is accurate at this job. Six chat questions are not a test.
+- Power or energy use.
+- Repeat runs. Most numbers come from one run.
+
+## Problems and fixes
+
+- `Ctrl-C` didn't exit `llima` in an interactive session. I closed the SSH connection with `~.` and confirmed nothing was still running before measuring.
+- `llima run` has no image option in `cli` mode, so the photo test didn't happen.
+
