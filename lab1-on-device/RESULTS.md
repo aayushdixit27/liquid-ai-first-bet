@@ -27,3 +27,9 @@ In progress.
 | 230M on CPU, short prompt first token | 0.064 s | measured | 14-token prompt |
 | 230M on CPU, memory | 562 to 569 MB | measured | Read before and after the runs |
 | Accelerator speed advantage | 4.9x | computed | Long prompts, 279.3 / 56.6. Different file format and runtime |
+| 4B on accelerator, cold start | 14.26 s | measured | One run |
+| 4B on accelerator, long prompt speed | 21.5 tokens/s | measured | One run, 724 tokens |
+| 4B on accelerator, long prompt first token | 0.35 s | measured | Timed across a terminal |
+| 4B on accelerator, short prompt speed | 24.3 tokens/s | measured | One run, 41 tokens |
+| 4B on accelerator, short prompt first token | 0.21 s | measured | Timed across a terminal |
+| 4B on accelerator, short prompt total | 1.9 s | measured | Text only, model already loaded |
