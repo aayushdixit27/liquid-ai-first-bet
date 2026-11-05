@@ -1,31 +1,19 @@
-# Liquid AI: first bet
+# "Liquid's bet is that device-native, constraint-aware AI is how intelligence actually reaches the real world."
 
-Three one-hour labs I'm running to prepare for a Product Manager interview at [Liquid AI](https://www.liquid.ai). The posting asks for hands-on model depth: "you have fine-tuned, trained, or built evals for models yourself." So I'm doing that here, on an edge AI board on my desk.
+That line is from [Liquid AI's product page](https://www.liquid.ai). I'm preparing for a Product Manager interview there, so I'm testing it myself, on a SiMa Modalix board on my desk.
 
-The labs were built with Claude. I run them, make the decisions, and write up the results.
+**What fits on the device? What can it be trusted to decide? What does it take to make it better after it ships?**
 
-| Lab | Question | Results |
-|---|---|---|
-| 1. [On-device](lab1-on-device/) | When is an on-device model the right tool? | Not run yet |
-| 2. [Decide](lab2-decide/) | What belongs in the model, and what in the harness? When is a decision model right? | Not run yet |
-| 3. [Fine-tune](lab3-fine-tune/) | When is fine-tuning worth it? | Not run yet |
+## What I've found
 
-The labs follow one running bet, in [BET.md](BET.md): a vertical, a buyer and a claim that could be proven wrong, kept, changed or killed as the evidence comes in.
+In progress. Each finding lands here when a lab proves it.
 
-## Run them
+## The evidence
 
-You need a SiMa.ai Modalix DevKit, a Mac, and [Claude Code](https://claude.com/claude-code).
+| Lab | Question |
+|---|---|
+| [On-device](lab1-on-device/) | When does the model belong on the device? |
+| [Decide](lab2-decide/) | What belongs in the model, and what in the harness? |
+| [Fine-tune](lab3-fine-tune/) | When is fine-tuning worth paying for? |
 
-```
-uv venv --python 3.12 .venv
-uv pip install --python .venv/bin/python -r requirements.txt
-brew install llama.cpp
-```
-
-Models go in `.cache/models/`. Open Claude Code here and type `/lab1`. It walks you through one step at a time.
-
-## Limits
-
-The eval set is small, and its bank, customers and account numbers are fictional. Every number is labelled measured or vendor.
-
-Not affiliated with Liquid AI, SiMa.ai or my employer.
+Claude built the labs. I run them, make the calls, and own the conclusions. My running thesis is in [BET.md](BET.md). To reproduce this, see [SETUP.md](SETUP.md).

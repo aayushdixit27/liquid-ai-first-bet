@@ -17,6 +17,17 @@ Aayush runs these labs on a SiMa Modalix board to prepare for a Product Manager 
 
 10. **Commit and push after every step.** This repo is public and should show the work as it happens. After each step, commit what changed and push to `main`, with a plain message such as `lab1: measured the accelerator against SiMa's stated speed`. Failures and fixes get committed too. Before each push, check `git status`: never commit `.cache/`, keys, passwords, or anything about Aayush's employer.
 
+11. **Keep the README sharp.** At the end of each lab, update "What I've found" in `README.md` with what the lab proved. Details stay in that lab's `RESULTS.md`.
+
+    The north star is the headline: is device-native, constraint-aware AI how intelligence reaches the real world? A line stays only if it moves that question. Every finding must pass all of these:
+
+    - It's a conclusion, inference or insight. A reader would act on it or remember it, and it's not a log of what was done.
+    - It's backed by a measured number that Aayush can defend, with its limit.
+    - It says something a reader couldn't have guessed. If it would be true of any project, cut it.
+    - It's Aayush's own view, in their words.
+
+    Prefer one line per finding, five findings at most across the whole README. Include what went against the bet. Replace weaker lines as stronger ones land. Never list steps, tools, setup or activity. Run `/deslop` on the README before pushing, then cut once more.
+
 ## What every lab is for
 
 Liquid lists six things it wants in a product person. Every lab centres on the fourth and trains the rest through one running bet.
