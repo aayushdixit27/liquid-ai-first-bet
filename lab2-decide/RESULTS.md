@@ -18,6 +18,18 @@ My guesses before running: rules 45, d1 50, chat model 35. After seeing the chat
 
 16 of 60 answers changed between the CPU and accelerator builds. I guessed 5.
 
+## Threshold
+
+Rules then d1 scored 57/60 at all three thresholds. Only the mistakes changed.
+
+| Threshold | Leaks missed | Safe blocked | Label |
+|---|---|---|---|
+| 0.3 | 0 | 3 | measured |
+| 0.5 | 1 | 2 | measured |
+| 0.7 | 3 | 0 | measured |
+
+I'd start at 0.3, because the cost of a leak is greater than the cost of a real customer having to call support. The final number needs real customer data. At 60 rows I can't claim d1 is calibrated.
+
 ## Problems and fixes
 
 - The accelerator build added a letter on 21 of 60 answers, such as `LEAKE` and `SAFED`. The parser rejected them. I changed it to accept those as LEAK and SAFE, and re-ran. The CPU build gave clean answers on all 60.
