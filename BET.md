@@ -4,6 +4,52 @@ Written in Lab 1, then updated after each lab. Old versions stay visible.
 
 This is a sample project for a lab. It tests one idea on one board. It is not a product.
 
+## Version 5 (after Lab 3)
+
+**Decision:** Change. Keep the five-step design from version 3 and the gate job from version 4. Move the claim from the model alone to the whole system.
+
+**Claim:** At one gate, the simple check, the local model and random cloud review together miss fewer than 1 in 20 open gates and send fewer than 1 in 20 photos to the cloud. I'm wrong if the system can't hit those numbers, or if it uses too much power for a site that can't run a satellite dish all day.
+
+This claim is untested. The limits are still targets I chose.
+
+**What changed my mind:** On 254 clean gate photos, both models failed alone.
+
+| Model alone | Right | Open gates missed | False alarms | Median per photo |
+|---|---|---|---|---|
+| LFM2.5-VL-450M | 185/254 | 67 of 114 (59%) | 2 of 140 (1.4%) | 105 ms |
+| Qwen3-VL-4B | 187/254 | 32 of 114 (28%) | 35 of 140 (25%) | 443 ms |
+
+Fine-tuning won't rescue this yet. In Lab 3 the tuned text model scored 56/60 and then caught none of 5 leaks in new styles. There are 294 gate photos from one or two driveway cameras, so a tuned vision model might learn that driveway. It would also need SiMa's Model Compiler to reach the accelerator.
+
+**Buyer and budget:** Pipeline operations or integrity, as a best guess. I need to confirm that with an operator.
+
+**Price:** $25 per site per month stays a placeholder. The first questions for an operator are how many valve sites lack power or a good link, and how many incidents a site has each year.
+
+**First customer to repeatable:** Start with one operator and a few sites. Use their camera photos to build their eval, and run the same eval on the exact build before each site or update. If every site needs its own retraining, this is services and it won't repeat.
+
+### Plan engineers could build
+
+**Goal:** Find out if the whole system can meet the claim at one gate.
+
+**Build first:** The five-step flow on one gate, replaying a day of photos.
+1. Simple check: compare each photo with a saved normal one.
+2. Local model: ask only "Is the gate open or closed?"
+3. Cloud review: send anything flagged, plus a random sample of photos marked normal.
+4. Alert: send a flag and the photo to a person.
+5. Log every decision, so missed gates and cloud use can be counted.
+
+**Then measure:** Open gates missed, photos sent to the cloud, and energy for each check.
+
+**Cut:** Cut fences, utilities, written reasons in alerts, fine-tuning, and any field deployment.
+
+**Kill it if:**
+- The system still misses 1 in 20 open gates or more.
+- It sends 1 in 20 photos to the cloud or more.
+- Most valve sites already have enough power and a good link.
+- An operator won't act on a flag and a photo, or can't get a budget for it.
+
+**Limits:** No operator has seen this. The replay photos would come from a driveway camera unless an operator provides real ones.
+
 ## Version 4 (after the photo test)
 
 **Decision:** Change. Keep the design and the five steps in version 3. Narrow the job to what the model showed it can see: is the gate open?

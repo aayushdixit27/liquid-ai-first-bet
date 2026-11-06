@@ -1,6 +1,10 @@
 # Lab 3: Fine-tune
 
-Built with Claude to prepare for my Liquid AI product interview. In progress. From my phone, I sent the commands and Claude ran them on the Mac.
+Built with Claude to prepare for my Liquid AI product interview. I ran this lab from my phone: I made the calls, and Claude ran the commands on the Mac and the board.
+
+## What I wanted to know
+
+When is fine-tuning worth paying for, and how would I know it learned and didn't just memorize?
 
 ## What I measured
 
@@ -28,3 +32,33 @@ My guess before training: 55/60, beating rules. My guess on the 10 new replies: 
 Training: 3.9M of 233.6M weights, 246 training rows, 30 validation rows, about 2.5 minutes on the Mac. The tuned file is 247 MB.
 
 The 32 is not a real improvement. With two examples the model answered SAFE on 59 of 60 rows, so it nearly matched doing nothing.
+
+## What surprised me
+
+The model went from 23/60 to 56/60, close to my 55 guess. Then it caught none of 5 leaks on 10 new replies, against my 8/10 guess.
+
+Two prompt examples swung the model to SAFE on 59 of 60 rows. That scored 32, which looked like a win until I read the answers.
+
+## What I'd tell a customer
+
+Start with the cheapest fix: prompt first, then the harness for anything you can write as exact steps. Fine-tune when the job needs understanding a prompt can't give, and when you have data that looks like production.
+
+Fine-tuning was worth it for patterns like the training data. Beyond that it's unproven, so I'd lead with the lowest score, 5/10. The eval has to include data that doesn't resemble the training set.
+
+Someone has to own the loop: watch for new failures, add them to the eval, decide when to retrain, and check the exact build before it ships.
+
+## What this doesn't show
+
+- A real-world score. Many eval rows share templates with the training data.
+- A fair fight with d1. The tuned model trained on this task and d1 did not.
+- A clean new-style test. It has only 10 rows, and Claude wrote them knowing the model's failures.
+- Accelerator performance. The tuned model ran on the CPU. Compiling for the MLA needs SiMa's Model Compiler, and SiMa recommends a 128 GB machine.
+
+## Buyer, budget owner, pricing, and what would kill it
+
+Pipeline operations or integrity, as a best guess, with $25 per site per month as a placeholder. The kill conditions are in [BET.md](../BET.md).
+
+## The bet: keep, change or kill, and why
+
+Change. Keep the two-tier check and random review, and test the whole system. Both vision models failed the gate claim alone on 254 clean photos, missing 59% and 28% of open gates. Details and the plan are in [BET.md](../BET.md).
+
