@@ -62,7 +62,7 @@ proc = serve(LFM)
 for i, r in enumerate(rows):
     out, ms = post("/v1/chat/completions", {"messages": [{"role": "user", "content": chat_prompt(r)}], "temperature": 0, "max_tokens": 8})
     text = out["choices"][0]["message"].get("content") or ""
-    found = re.findall(r"\b(LEAK|SAFE)\b", text.upper())
+    found = re.findall(r"\b(LEAK|SAFE)", text.upper())  # same parser as board_judge_mla.py
     results[r["id"]].update(chat=found[0] if found else "UNPARSED", chat_text=text[:80], chat_ms=ms)
     if i % 10 == 0:
         print(f"  chat {i}/{len(rows)}  {ms:.0f} ms  {text[:30]!r}", flush=True)

@@ -14,6 +14,13 @@ def line(name, rows):
           f"   safe blocked {sum(not leak(r) and not right(r) for r in rows):>2}   unparsed {sum(r['chat'] == 'UNPARSED' for r in rows)}")
 
 line("before", before); line("after", after)
+changed = sum(before[i]["chat"] != after[i]["chat"] for i in before)
+rows = list(after.values())
+print(f"\nAnswers that changed: {changed} of {len(rows)}. Two equal scores can hide this.")
+print(f"Doing nothing, always answering SAFE, would score {sum(not leak(r) for r in rows)}/{len(rows)}.")
+if all("rules" in r for r in rows):
+    both = sum((r["rules"] or r["chat"] == "LEAK") == leak(r) for r in rows)
+    print(f"Rules, then this model: right {both}/{len(rows)}.")
 fresh = {i: r for i, r in after.items() if r.get("unseen_secret")}
 if fresh:
     print("\nThe honest test: only rows whose secret never appeared in training")

@@ -1,9 +1,9 @@
 """Runs on the board. Puts each photo through a vision model on the MLA and saves the answers.
 
 The server starts once and stays loaded. It takes an image as a file path on the board.
-Usage: python3 board_photo.py <photo_eval.jsonl> <photos folder> <out.jsonl> [model] [combined|narrow]
+Usage: python3 board_photo.py <photo_eval.jsonl> <photos folder> <out.jsonl> [model] [combined|narrow|gate]
 combined asks one broad question. narrow asks about the gate and the fence separately, and a code rule
-turns the two answers into PROBLEM or NORMAL.
+turns the two answers into PROBLEM or NORMAL. gate asks only the gate question.
 """
 import json, os, re, subprocess, sys, time, urllib.request
 
@@ -39,7 +39,11 @@ try:
     with open(OUT, "w") as f:
         for i, r in enumerate(rows, 1):
             path = os.path.join(PHOTOS, r["file"])
-            if MODE == "narrow":
+            if MODE == "gate":
+                text, ms = ask(path, GATE)
+                g = re.findall(r"\b(OPEN|CLOSED)", text.upper())
+                answer = ("problem" if g[0] == "OPEN" else "normal") if g else "UNPARSED"
+            elif MODE == "narrow":
                 gate, ms1 = ask(path, GATE)
                 fence, ms2 = ask(path, FENCE)
                 g, f2 = re.findall(r"\b(OPEN|CLOSED)", gate.upper()), re.findall(r"\b(INTACT|DAMAGED)", fence.upper())
