@@ -1,0 +1,322 @@
+[
+{
+"id": "gate-open-01",
+"file": "real/gate-open-01.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-02",
+"file": "real/gate-open-02.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-03",
+"file": "real/gate-open-03.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-04",
+"file": "real/gate-open-04.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-05",
+"file": "real/gate-open-05.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-06",
+"file": "real/gate-open-06.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-07",
+"file": "real/gate-open-07.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-08",
+"file": "real/gate-open-08.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-09",
+"file": "real/gate-open-09.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-10",
+"file": "real/gate-open-10.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-11",
+"file": "real/gate-open-11.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-12",
+"file": "real/gate-open-12.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-13",
+"file": "real/gate-open-13.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-14",
+"file": "real/gate-open-14.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-15",
+"file": "real/gate-open-15.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-16",
+"file": "real/gate-open-16.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-17",
+"file": "real/gate-open-17.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-18",
+"file": "real/gate-open-18.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-19",
+"file": "real/gate-open-19.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "day",
+"truth": "open"
+},
+{
+"id": "gate-open-20",
+"file": "real/gate-open-20.jpg",
+"label": "problem",
+"group": "real_gate",
+"light": "dark",
+"truth": "open"
+},
+{
+"id": "gate-closed-01",
+"file": "real/gate-closed-01.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-02",
+"file": "real/gate-closed-02.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-03",
+"file": "real/gate-closed-03.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-04",
+"file": "real/gate-closed-04.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-05",
+"file": "real/gate-closed-05.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-06",
+"file": "real/gate-closed-06.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-07",
+"file": "real/gate-closed-07.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-08",
+"file": "real/gate-closed-08.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-09",
+"file": "real/gate-closed-09.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-10",
+"file": "real/gate-closed-10.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-11",
+"file": "real/gate-closed-11.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-12",
+"file": "real/gate-closed-12.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-13",
+"file": "real/gate-closed-13.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-14",
+"file": "real/gate-closed-14.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-15",
+"file": "real/gate-closed-15.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-16",
+"file": "real/gate-closed-16.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-17",
+"file": "real/gate-closed-17.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "day",
+"truth": "closed"
+},
+{
+"id": "gate-closed-18",
+"file": "real/gate-closed-18.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-19",
+"file": "real/gate-closed-19.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+},
+{
+"id": "gate-closed-20",
+"file": "real/gate-closed-20.jpg",
+"label": "normal",
+"group": "real_gate",
+"light": "dark",
+"truth": "closed"
+}
+]
