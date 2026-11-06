@@ -32,6 +32,17 @@ Qwen said normal on all 9 generated images, so its 6 right there don't show it c
 
 My guesses before running: LFM 35, Qwen 41 on the broad question, cut fences the hardest group. The hardest-group guess was right for Qwen.
 
+## Clean test of "is the gate open?"
+
+254 dataset photos the first test didn't use: 114 open, 140 closed. The prompt was locked before this run. Always answering NORMAL would score 140.
+
+| Model | Right | Open gates missed | False alarms | Median per photo | Label |
+|---|---|---|---|---|---|
+| LFM2.5-VL-450M | 185/254 | 67 of 114 | 2 of 140 | 105 ms | measured |
+| Qwen3-VL-4B | 187/254 | 32 of 114 | 35 of 140 | 443 ms | measured |
+
+My guesses: LFM 150, Qwen 180. Neither model meets the claim of missing fewer than 1 in 20 open gates. From my phone, I sent the go and Claude ran it. The photos come from the same driveway cameras as the first 40, so similar shots may repeat.
+
 ## What we did when it failed
 
 1. Every answer was PROBLEM, so we suspected the harness before the model.
