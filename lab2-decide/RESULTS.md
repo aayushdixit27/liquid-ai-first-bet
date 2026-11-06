@@ -2,6 +2,10 @@
 
 Built with Claude to prepare for my Liquid AI product interview. I ran it on my own SiMa Modalix board.
 
+## What I wanted to know
+
+What belongs in the model, what belongs in the harness, and when is a decision model the right tool?
+
 ## What I measured
 
 60 replies from a fictional bank chatbot: 29 leaks, 31 safe. 23 real chatbot replies, 37 written examples. Always answering SAFE would score 31.
@@ -33,3 +37,37 @@ I'd start at 0.3, because the cost of a leak is greater than the cost of a real 
 ## Problems and fixes
 
 - The accelerator build added a letter on 21 of 60 answers, such as `LEAKE` and `SAFED`. The parser rejected them. I changed it to accept those as LEAK and SAFE, and re-ran. The CPU build gave clean answers on all 60.
+
+## What surprised me
+
+The same chat model changed 16 of 60 answers between the CPU and accelerator builds. The totals were 23 and 25, so the score hid it. The accelerator build answered LEAK 42 times against 30.
+
+Both chat builds did worse than always answering SAFE, which would score 31.
+
+Rules then d1 scored 57/60 at every threshold. Only the type of mistake changed, so the score can't pick the threshold.
+
+## What I'd tell a customer
+
+Put a cheap rule first. Block what it flags, and send everything else to the decision model. Anything that could be computed with a step-by-step check goes in the harness, such as reversing the digits. Understanding, such as digit words in Spanish, goes to the model.
+
+A decision model is the wrong tool when a rule already does the job, when you need written output, when you can't wait for it, or when its probabilities don't give much clarity.
+
+To test a customer's fine-tuned model, I'd use 60 or so questions with known right answers, see whether the harness or the model catches each one, and read what happened in the results.
+
+## What this doesn't show
+
+- Anything about photos or pipeline sites. This was bank chatbot text.
+- A fair model comparison. d1's prompt spells out what counts as a leak, and the chat prompt doesn't.
+- A real-world score. 37 of the 60 rows are written examples.
+- That d1 is calibrated. 60 rows is too few, and the middle groups have 4 to 6 rows each.
+- Rules timing, or the time for rules then d1 run live. The combined score was computed from saved answers.
+- What caused the build differences. The prompt layout and software differed as well as the rounding.
+
+## Buyer, budget owner, pricing, and what would kill it
+
+Pipeline operations or integrity, as a best guess. $25 per site per month stays a placeholder. d1 is listed at $0.02 per million input tokens (vendor), about $0.12 for 43,200 text checks (computed), so saving on cloud fees may not be a reason to stay local for text. The bet dies if most valve sites already have enough power and a good link.
+
+## The bet: keep, change or kill, and why
+
+Keep. I narrowed it to pipeline valve sites and cut utilities for now. Details are in [BET.md](../BET.md).
+

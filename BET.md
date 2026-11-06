@@ -4,6 +4,31 @@ Written in Lab 1, then updated after each lab. Old versions stay visible.
 
 This is a sample project for a lab. It tests one idea on one board. It is not a product.
 
+## Version 3 (after Lab 2)
+
+**Decision:** Keep the bet. The claim in version 1 stays. Lab 2 used bank chatbot replies, so it did not test photos or this use case.
+
+**Vertical, narrowed:** Pipeline valve sites. These are small fenced yards, often remote, with a shut-off valve on the line. I cut utilities for now. I chose pipelines because power and connectivity limits are more likely there, which I still need to confirm with an operator.
+
+**How it works:**
+1. The camera takes a photo every minute.
+2. The harness runs a simple check, comparing the photo with a normal one. This part is ordinary code, not AI.
+3. The local model reviews the photo and decides if something looks wrong. Most photos stop here.
+4. The cloud model checks anything flagged, plus a small random sample of "all clear" photos.
+5. A person gets a flag and the photo, and decides what to do.
+
+**What Lab 2 showed:** On 60 fictional bank replies, rules scored 49, d1 scored 53, and the two together scored 57. A cheap check plus a model beat either one alone. This supports the design, but on a different task.
+
+**What would have broken it:** If rules plus a model had scored no better than the model alone, the cheap first step wouldn't earn its place.
+
+**Evidence against:** Lowering the cloud bill may not be a reason to stay local. At d1's listed price of $0.02 per million input tokens (vendor), 43,200 text checks a month cost about $0.12 (computed from 144.55 mean input tokens). d1 reads text, not photos, and I don't have a real image price. The reasons to stay local are still limited power, a weak link and keeping data on site.
+
+**Buyer and budget:** Pipeline operations or integrity, as a best guess. I need to confirm that with an operator.
+
+**Price:** $25 per site per month stays a placeholder. I found no reported cost for a pipeline site incident.
+
+**Cut:** Utilities, for now.
+
 ## Version 2 (after Lab 1)
 
 **Decision:** Keep the bet for now. I need more information before I change it, specifically what happens when a photo goes through the model. The claim stays as it is in version 1.
