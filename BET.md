@@ -4,6 +4,24 @@ Written in Lab 1, then updated after each lab. Old versions stay visible.
 
 This is a sample project for a lab. It tests one idea on one board. It is not a product.
 
+## Version 4 (after the photo test)
+
+**Decision:** Change. Keep the design and the five steps in version 3. Narrow the job to what the model showed it can see: is the gate open?
+
+**Claim:** A small AI model on a box at a remote site can spot an open gate. It checks a camera photo every minute. It asks the cloud for help on fewer than 1 in 20 photos and misses fewer than 1 in 20 open gates. I'm wrong if it can't hit those numbers, or if it uses too much power for a site that can't run a satellite dish all day.
+
+This claim is untested as written. The limits are still targets I chose.
+
+**What changed my mind:**
+- Speed passed. A photo took about 0.1 to 0.9 s, and cold start was 5.5 to 16.5 s.
+- The old claim failed on this test. The best run, Qwen with narrow questions, missed 5 of 23 problems and flagged 26 of 49 photos.
+- Qwen missed all 3 cut fences and called all 9 valve-yard images normal.
+- On real gate photos, the Liquid model's gate question got 30 of 40: 20 of 20 closed and 10 of 20 open (computed). It raised no false alarms there and missed half the open gates.
+
+**Cut fences:** Unproven until tested with closer views, such as cropping the fence into sections before the model sees it.
+
+**Limit:** 40 real photos from a driveway camera, plus 9 generated images. Random review wasn't included, and the narrow prompt was picked after seeing 4 rows.
+
 ## Version 3 (after Lab 2)
 
 **Decision:** Keep the bet. The claim in version 1 stays. Lab 2 used bank chatbot replies, so it did not test photos or this use case.

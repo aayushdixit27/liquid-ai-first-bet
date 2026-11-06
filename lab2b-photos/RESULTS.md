@@ -4,7 +4,7 @@ Built with Claude to prepare for my Liquid AI product interview. All four runs a
 
 ## What this has taught me so far
 
-**Speed is not the limit. Seeing is.** Both models checked a photo in about a second or less. Neither model could tell the valve-yard images apart, and Qwen missed all 3 cut fences.
+**Accuracy was the problem, and speed wasn't.** Both models checked a photo in about a second or less. Neither model could tell the valve-yard images apart, and Qwen missed all 3 cut fences.
 
 **The wording of the question can break a vision model that can see.** One broad question got PROBLEM on all 49 images from both models. Narrow questions gave Qwen its best score, 36/49. A bigger model made no difference on the broad question.
 
@@ -44,6 +44,10 @@ My guesses before running: LFM 35, Qwen 41 on the broad question, cut fences the
 
 - A clean test of the fix. It was chosen after seeing 4 of these images.
 - Accuracy at a valve site. The 40 real photos are from a driveway camera, and the 9 valve-yard images are generated.
+
+## The bet: keep, change or kill, and why
+
+Change. I kept the design and narrowed the job to what the model showed it can see: is the gate open? Cut fences stay unproven until they're tested with closer views, such as cropped sections of the fence. The new claim still needs testing. Details are in [BET.md](../BET.md).
 
 ## Sources
 
