@@ -45,7 +45,7 @@ rows = [json.loads(l) for l in open(SRC)]
 with open(OUT, "w") as f:
     for i, r in enumerate(rows):
         text, ms, raw = ask(chat_prompt(r))
-        found = re.findall(r"\b(LEAK|SAFE)\b", text.upper())
+        found = re.findall(r"\b(LEAK|SAFE)", text.upper())  # the compiled model sometimes adds a letter: LEAKE, SAFED
         r.update(chat=found[0] if found else "UNPARSED", chat_text=text[:80], chat_ms=ms)
         f.write(json.dumps(r, ensure_ascii=False) + "\n"); f.flush()
         print(f"{i + 1}/{len(rows)}  {r['chat']:<9} {ms:.0f} ms  {text[:30]!r}" + ("" if text else f"  RAW {raw!r}"), flush=True)
