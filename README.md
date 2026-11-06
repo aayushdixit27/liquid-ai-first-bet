@@ -21,4 +21,4 @@ That line is how [Liquid AI](https://www.liquid.ai) describes its own bet to pro
 | [Photos](lab2b-photos/) | Can a small vision model see a lasting problem? |
 | [Fine-tune](lab3-fine-tune/) | When is fine-tuning worth paying for? |
 
-Claude built the labs. I ran Labs 1 and 2 and the first photo tests. For Lab 3 and the clean gate test, I directed from my phone and Claude ran the commands. I made the calls and own the conclusions. My running thesis is in [BET.md](BET.md). To reproduce this, see [SETUP.md](SETUP.md).
+Claude built the labs. I ran Labs 1 and 2 and the first photo tests. For Lab 3 and the clean gate test, I directed from my phone and Claude ran the commands. I later re-ran Lab 3 training and the board eval myself and got the same 60 answers. I made the calls and own the conclusions. My running thesis is in [BET.md](BET.md). To reproduce this, see [SETUP.md](SETUP.md).

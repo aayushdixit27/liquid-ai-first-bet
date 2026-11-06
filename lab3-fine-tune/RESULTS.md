@@ -29,7 +29,7 @@ My guess before training: 55/60, beating rules. My guess on the 10 new replies: 
 
 **Lead with the 5/10.** The 56/60 came from rows that share templates with the training data. On a new style, the tuned model caught no leaks. Ten rows is small, but all 5 leaks were missed.
 
-Training: 3.9M of 233.6M weights, 246 training rows, 30 validation rows, about 2.5 minutes on the Mac. The tuned file is 247 MB.
+Training: 3.9M of 233.6M weights, 246 training rows, 30 validation rows, about 2.5 minutes on the Mac. The tuned file is 247 MB. I re-ran training and the board eval myself with the same settings and seed: 56/60 again, 0 of 60 answers changed (`tuned_mine.jsonl`). The 10 new-style rows were not re-run.
 
 The 32 is not a real improvement. With two examples the model answered SAFE on 59 of 60 rows, so it nearly matched doing nothing.
 
